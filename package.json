@@ -1,0 +1,49 @@
+{
+  "name": "@vaultscope/vss-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for VaultScope Statistics Server",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "test": "node examples/basic.js"
+  },
+  "keywords": [
+    "vaultscope",
+    "vss",
+    "statistics",
+    "monitoring",
+    "api",
+    "sdk",
+    "typescript"
+  ],
+  "author": "VaultScope",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaultscope/vss-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/vaultscope/vss-sdk/issues"
+  },
+  "homepage": "https://github.com/vaultscope/vss-sdk#readme"
+}
